@@ -5,6 +5,9 @@
 #
 # See /LICENCE.md for Copyright information
 
+include ("smspillaz/cmake-include-guard/IncludeGuard")
+cmake_include_guard (SET_MODULE_PATH)
+
 # psq_append_typed_cache_definition
 #
 # Appends some typed values to a CMakeCache definition (eg, -DVALUE=OPTION)
