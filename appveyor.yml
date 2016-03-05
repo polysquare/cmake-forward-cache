@@ -17,7 +17,7 @@ before_build:
  - ps: git submodule update --init --recursive
 
 install:
- - ps: $env:PATH="C:\\MinGW\bin;C:\\Python34;C:\\Python34\\Scripts;C:\\Python27;C:\\Python27\Scripts;C:\\Ruby21\bin:$env:PATH"
+ - ps: $env:PATH="C:\\MinGW\bin;C:\\Python35;C:\\Python35\\Scripts;C:\\Python27;C:\\Python27\Scripts;C:\\Ruby21\bin:$env:PATH"
  - ps: wget public-travis-scripts.polysquare.org/bootstrap.py -OutFile bootstrap
  - ps: python bootstrap -d "C:/container" -s setup/bii/setup.py -e powershell -p test-env.ps1 --no-mdl --cmake-version latest
  - ps: . ./test-env
