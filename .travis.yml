@@ -31,7 +31,7 @@ before_cache:
 after_success:
 - polysquare_run coverage/cmake/coverage.py
 before_deploy:
-- polysquare_run deploy/script/before_deploy.py deploy/conan/deploy.py --package=cmake-forward-cache
+- polysquare_run deploy/script/before_deploy.py deploy/conan/deploy.py --package=cmake-forward-cache --user=$CONAN_USER --password=$CONAN_PASSWORD
 deploy:
   provider: script
   skip_cleanup: true
