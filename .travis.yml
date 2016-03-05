@@ -33,7 +33,7 @@ after_success:
 deploy:
   provider: script
   skip_cleanup: true
-  script: polysquare_run deploy/bii/deploy.py
+  script: polysquare_run deploy/bii/deploy.py --package=cmake-forward-cache
   on:
     repo: polysquare/cmake-forward-cache
     branch: master
