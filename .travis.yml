@@ -11,8 +11,8 @@ env:
   - CMAKE_GENERATOR="Ninja" CMAKE_VERSION="3.0"
   - CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="latest" COVERAGE="--use-cmake-coverage"
   global:
-  - secure: AZwf7udQQDvlBl/Z+x66xZPNDQb/1orJDCqnb0KxRpaYZ+TKyw8ZwBGnoBs05Yab86fDnh9cLgjas3Xn4tJqkzI3jeAerOLUHFnK2oD8YN3tf11Vu2vRweQus69p3ydK8EVm3zWDONvjG59tRfjoZrwqtdaI244GsqleuWx4a5Uopil9tF/LkSq1DUAPO+s0FiNYSCHOKlHHMtA+kTUCsMSWwJiWyzj4/gVzBHKJdim8QxiBWtviZaFbOVWA8KsFO46MSjxfiKEOKVIIrMKDEj9I5k9tI1AU3U7xYgcq3cbDPZkK2OjzZDcaVp3LWr5/iiWidzhecX2lDQHYMtzsVA1pzzQvsFNAnXGJPztZK8CDbLldBQAxWMv8SBF0Fj0IuzarowVca9VrtmkMtxV7/veXqNQjW6m4Z+0nq4hScfaQ1cOF/hYmQmQmnENVm91KNbycklaZMXnwQoeB00ZDBBhK3kLfkVOpkxrdFWfimYGxGjrA9qz85P5kVAWKW21vChLGsQHKTiscn6Z71UHVpOB0CkbXRKplQS1ONcpISXvfjmxgZXMcRkXgcFDZ3g+7YEXaifVvrV8egJdJUs1qytpMd8Y5FjCLYcSqUV7fooDS+LLHjPBvjMly7zfAVPtjPouDWmTxkkR1zQXYB8rZsIfUR1Bu2TyFBnLrvJ4nOpI=
-  - secure: eGmyraKvJ+knsu26rqm4rDCON7B/bfD6V6UEQH/TMw7fypMkngoH4zvIWvyFrdjtzJzMD25gUhpnaY9xQIXxca814A2q1uAwlB7N1fLIjUIr4AY4Te5xrDuZOI/pfzD+Zkikph5GiEhIS/IoqTcK8tRamzNNhCUI8KFPIPuoV18SDtbGdDCeLCIjDM+9PxRKLaFUub3cgYEa2v2kl5sStassLOp0J+8v64VO1cYD/LFvq+4ln2J2Czboga5SffjR/sE/Z8yYCFmKPCsBXn3NMJ0OOnKYMpYFX9JQT9floiq+4IgaQkXdeWFpT5bIp80e8kv1yA+kTPYxf4r/Bb/5P/78GY97HazDKlyWgJ9TvIzeuG1l4zuT22jh0ZSJNACEF5BvlfgF7Mk6wAOkgpxqPO1q7IsXFB2RpG9ixloWWa9mmxTTk4Fqd8KEUCVpwyu0XVicqHzeafkwol4sGLwki+snkHRQts07/iP8OZDnI14OjXhRQ+onDukVNLAM5GWs6W9Oh6vR4n6kjvIo0z6042FaisPrRBOcz8qugD+YyNfOXDFrWkH0UJgHpDE22UgO1TLzT2O3l+j3KiQIJ3jaSA7TQgDSR8DnhTNLBZNHyugMQh+d28LqfAW7WUCAB0811tczcKuuzSpvSAhggQG/fOfuV/NsY99Fk58yeLXT08U=
+  - secure: KcPzqqv8JjKPtzA76MOXjwAKX3zfeRRekmPZLmIo0YGii8iV+dv4pz4RC1z/SvqwteyLJ5Am2EIAaLEFi8Lt5yefc26C7GSF1YBQB+q0h/RZDUyNaifJvo12Bo2POgVNNetH9IBQx7Z65Ga7/vvZNthNwLl+PtlUxe3viaZltanY2ZdQJS9+1Lc27MCCqR9/HhL1K5HSYqbkmdnL05yalBmtUMmH4LLEvC9pCU//leMGwoOM10xXkpJrxu7PELWI+Olhcc//lgfujf0NO3DAZAStVI6f52AJwpQ5fRHBWqR18d7bMeLirFR2X/xzfzTLCB59+B6JK/Ym1EfLtpcvTdjLK3zOabQ4+mirMim2VW8sDATp0NtnkSfITfQQOMSGpVyiEvUI3svCl0fb3W9FcnNG8ZO4W+Nb1CGquydKTukTjZKVtPfJWhUm8lSGH1fwP+OLPliAJJU0yiesscpxyrM3rL52rzYsulhLj/1JT5HYzqCRjiq7U20Gcw2SZLRQ20Mk3SflPeJLWXbRYn2ccoevW0LEtsADxDlks3zFrbgK6dm4KOOP0QfQOpqSY64fcUzyKtYagYSMdwZz4tAhVyGHkwbS2J1UYi1E+Z4oigBDliOskGy/7Rjyxkb9Q2qMTfEfuont1cOAVogUIOiRo/FlGMnOWeuXvzx/bc2PxXY=
+  - secure: rkSlwZGAEmeqenoztCeCSwcmK429IIpHuHyqJdwheT4phPKZzxvjZcjvX+BxercwzH3T+zoDdCmqdZCmMNwN0s63xEX4SLiKIJIVAqo3sSbhQ7cfdZra4zRX+rC1OCstXtG4x8Fr+n0Mg5Swwu+neVLlggogyuhCxmRvHf9ZwueG7Z6eNnl075BwGW8VlElTiu1MPj94pOL1NJ6CdNrInSLsISRXYs/HCfq7+a+nVK1wMp4no1anMoJR3JkApWr72Chtqv6Vwz4RfxXGt/lTuf1+nsFeckhr4lAu+fwg1hrzscL35EwwWWynRya/0tImU2RtCv3UalJhC374aulUH6t91/cyjMiDGFkzH0qGPHb0fi9VolQBlgFMFPXeLCMOHvqkae9WmUS3R1gjicFJXaCiKTMlRM87kxO+Zpk6uHd6Ne7Vas+xxSshlSaE8I+tFxtqI0xNmN8iJFFwMieSz82r13bN1pq25yEQNmq6ERvwSakpwovp9p/AY/Of+bSqAhXoOUq83tsHZzxywyTM2d+f81v0UVZzephXgXLTpN6J1AHjKhGo1Yo/lIZctfCgAMXg9wJQaWF9m+YiMlcQflpzxAJiX28W4AIuIpAgOoU1GyiLgr8aIGBTmXQBS9VdRIHP8w1T7SdyPYKlyVKJJ/mUi3/KkaBFmwYc6wmZpHE=
 addons:
   apt:
     sources:
@@ -31,12 +31,13 @@ before_cache:
 after_success:
 - polysquare_run coverage/cmake/coverage.py
 before_deploy:
-- polysquare_run deploy/script/before_deploy.py deploy/conan/deploy.py --package=cmake-forward-cache --user=$CONAN_USER --password=$CONAN_PASSWORD
+- polysquare_run deploy/script/before_deploy.py deploy/conan/deploy.py --package=cmake-forward-cache
+  --user=$CONAN_USER --password=$CONAN_PASSWORD
 deploy:
   provider: script
   skip_cleanup: true
-  script: ./travis-deploy
+  script: "./travis-deploy"
   on:
     repo: polysquare/cmake-forward-cache
     branch: master
-    condition: ${DEPLOY} = 1
+    condition: "${DEPLOY} = 1"
