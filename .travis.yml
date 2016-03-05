@@ -18,7 +18,7 @@ addons:
     sources:
     - deadsnakes
     packages:
-    - python3.5-minimal
+    - python3.4-dev
 install:
 - eval $(curl -LSs --retry 100 --connect-timeout 3 public-travis-scripts.polysquare.org/bootstrap.py
   | python /dev/stdin -d container -s setup/conan/setup.py -e bash -p /dev/stdout
