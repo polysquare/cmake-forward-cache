@@ -12,6 +12,14 @@ class CMakeForwardCache(ConanFile):
     generators = "cmake"
     url = "http://github.com/polysquare/cmake-forward-cache"
     licence = "MIT"
+    options = {
+        "dev": [True, False]
+    }
+    default_options = "dev=False"
+
+    def requirements(self):
+        if self.options.dev:
+            self.requires("cmake-module-common/master@smspillaz/cmake-module-common")
 
     def source(self):
         zip_name = "cmake-forward-cache.zip"
