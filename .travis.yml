@@ -3,13 +3,21 @@ sudo: false
 cache:
   directories:
   - container
+matrix:
+  include:
+  - os: linux
+    env: CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="latest" DEPLOY="1"
+  - os: linux
+    env: CMAKE_GENERATOR="Ninja" CMAKE_VERSION="latest"
+  - os: linux
+    env: CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="3.0"
+  - os: linux
+    env: CMAKE_GENERATOR="Ninja" CMAKE_VERSION="3.0"
+  - os: linux
+    env: CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="latest" COVERAGE="--use-cmake-coverage"
+  - os: osx
+    env: CMAKE_GENERATOR="Xcode" CMAKE_VERSION="latest"
 env:
-  matrix:
-  - CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="latest" DEPLOY="1"
-  - CMAKE_GENERATOR="Ninja" CMAKE_VERSION="latest"
-  - CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="3.0"
-  - CMAKE_GENERATOR="Ninja" CMAKE_VERSION="3.0"
-  - CMAKE_GENERATOR="Unix Makefiles" CMAKE_VERSION="latest" COVERAGE="--use-cmake-coverage"
   global:
   - secure: KcPzqqv8JjKPtzA76MOXjwAKX3zfeRRekmPZLmIo0YGii8iV+dv4pz4RC1z/SvqwteyLJ5Am2EIAaLEFi8Lt5yefc26C7GSF1YBQB+q0h/RZDUyNaifJvo12Bo2POgVNNetH9IBQx7Z65Ga7/vvZNthNwLl+PtlUxe3viaZltanY2ZdQJS9+1Lc27MCCqR9/HhL1K5HSYqbkmdnL05yalBmtUMmH4LLEvC9pCU//leMGwoOM10xXkpJrxu7PELWI+Olhcc//lgfujf0NO3DAZAStVI6f52AJwpQ5fRHBWqR18d7bMeLirFR2X/xzfzTLCB59+B6JK/Ym1EfLtpcvTdjLK3zOabQ4+mirMim2VW8sDATp0NtnkSfITfQQOMSGpVyiEvUI3svCl0fb3W9FcnNG8ZO4W+Nb1CGquydKTukTjZKVtPfJWhUm8lSGH1fwP+OLPliAJJU0yiesscpxyrM3rL52rzYsulhLj/1JT5HYzqCRjiq7U20Gcw2SZLRQ20Mk3SflPeJLWXbRYn2ccoevW0LEtsADxDlks3zFrbgK6dm4KOOP0QfQOpqSY64fcUzyKtYagYSMdwZz4tAhVyGHkwbS2J1UYi1E+Z4oigBDliOskGy/7Rjyxkb9Q2qMTfEfuont1cOAVogUIOiRo/FlGMnOWeuXvzx/bc2PxXY=
   - secure: rkSlwZGAEmeqenoztCeCSwcmK429IIpHuHyqJdwheT4phPKZzxvjZcjvX+BxercwzH3T+zoDdCmqdZCmMNwN0s63xEX4SLiKIJIVAqo3sSbhQ7cfdZra4zRX+rC1OCstXtG4x8Fr+n0Mg5Swwu+neVLlggogyuhCxmRvHf9ZwueG7Z6eNnl075BwGW8VlElTiu1MPj94pOL1NJ6CdNrInSLsISRXYs/HCfq7+a+nVK1wMp4no1anMoJR3JkApWr72Chtqv6Vwz4RfxXGt/lTuf1+nsFeckhr4lAu+fwg1hrzscL35EwwWWynRya/0tImU2RtCv3UalJhC374aulUH6t91/cyjMiDGFkzH0qGPHb0fi9VolQBlgFMFPXeLCMOHvqkae9WmUS3R1gjicFJXaCiKTMlRM87kxO+Zpk6uHd6Ne7Vas+xxSshlSaE8I+tFxtqI0xNmN8iJFFwMieSz82r13bN1pq25yEQNmq6ERvwSakpwovp9p/AY/Of+bSqAhXoOUq83tsHZzxywyTM2d+f81v0UVZzephXgXLTpN6J1AHjKhGo1Yo/lIZctfCgAMXg9wJQaWF9m+YiMlcQflpzxAJiX28W4AIuIpAgOoU1GyiLgr8aIGBTmXQBS9VdRIHP8w1T7SdyPYKlyVKJJ/mUi3/KkaBFmwYc6wmZpHE=
@@ -21,6 +29,7 @@ addons:
     packages:
     - python3.4-dev
 install:
+- PYTHON=python3 eval "$(cutl -LSs --retry 100 --connect-timeout 3 public-travis-scripts.polysquare.org/bash/osx-python.sh)"
 - eval $(curl -LSs --retry 100 --connect-timeout 3 public-travis-scripts.polysquare.org/bootstrap.py
   | python /dev/stdin -d container -s setup/conan/setup.py -e bash -p /dev/stdout
   --cmake-version ${CMAKE_VERSION})
